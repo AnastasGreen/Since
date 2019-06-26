@@ -64,6 +64,7 @@ def phaza(r, phi):
     return (np.power(alpha * k * r, gamma)* m * phi)
 
 
+
 r_vals = r(x[:, None], y[None, :])
 phi_vals = phi(x[:, None], y[None, :])
 
@@ -82,7 +83,7 @@ for i in range(N):
             z_exp2[i, j] = f_exp2(r_vals[i, j], phi_vals[i, j]).real
             z_vals[i, j] = z(r_vals[i, j], phi_vals[i, j])
             z_sin[i, j] = f_sin1(r_vals[i, j], phi_vals[i, j]).real
-            # посмотреть только функцию phaza
+            # посмотреть только функцию phaza 
             z_v[i, j] = phaza(r_vals[i, j], phi_vals[i, j])
 
 
